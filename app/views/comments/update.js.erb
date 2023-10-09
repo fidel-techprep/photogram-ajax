@@ -1,0 +1,8 @@
+var form = $("#<%= dom_id(@comment.photo) %>_new_comment_form");
+var comment_body = $("#<%= dom_id(@comment) %> p").text("<%= @comment.body %>");
+
+form.fadeOut(400,
+  function() {
+    $(this).remove();
+    comment_body.fadeIn();
+  });

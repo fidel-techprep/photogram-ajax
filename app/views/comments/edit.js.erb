@@ -1,0 +1,6 @@
+var p = $("#<%= dom_id(@comment) %> p")
+
+var comment_form = $("<%= j(render 'comments/form', comment: @comment) %>");
+
+
+p.hide().before(comment_form)
